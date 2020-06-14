@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <h2>This is index page</h2>
+    <a href="/about-me">About me</a>
+    <a href="/portfolio">Portfolio</a>
+
+    <p>Text from handler: {{ text }}</p>
+    <p>Current year: {{ current_year }}</p>
+
+    {% if cities %}
+        <p>Cities variable exists</p>
+    {% else %}
+        <p>Cities variable does not exist</p>
+    {% endif %}
+
+    {% for city in cities %}
+        <p>{{ city }}</p>
+    {% endfor %}
+{% endblock content %}
